@@ -9,7 +9,7 @@ def main():
     authorizer = DummyAuthorizer()
     #pull this in from an INI created from the GUI
     #Hardcoded for now
-    pictureStorage = "F:\OneDrive\Pictures\FTP\Scanner"
+    pictureStorage = "D:\\scan_images"
     
     #create the scanner username
     #probably should change to a different username for production
@@ -23,8 +23,7 @@ def main():
     handler.banner = "Scanner Connected"
 
     # Instantiate FTP server class and listen on 0.0.0.0:2121
-    
-    address = ('192.168.50.7', 2121)
+    address = ('0.0.0.0', 2121)
     server = FTPServer(address, handler)
     
 
